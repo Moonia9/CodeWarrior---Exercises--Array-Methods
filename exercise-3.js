@@ -13,4 +13,12 @@ function positiveSum(arr){
     }
     return total;
 }
-console.log(positiveSum([1,-4,7,12]));
+console.log(positiveSum([1,-4,7,12])); //20
+
+//OR
+function posSum(array){
+    return array
+                .filter((num => num >= 0))
+                .reduce((accumulator, currentValue) => accumulator + currentValue);
+}
+console.log(posSum([1,-4,7,12]));
