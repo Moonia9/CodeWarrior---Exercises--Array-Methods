@@ -18,7 +18,7 @@ function positiveSum(arr){
 function positiveSum(arr){
     return arr
             .filter((element) => element > 0)
-            .reduce((element1, element2) => element1 + element2)
+            .reduce((element1, element2) => element1 + element2,0)
 }
 
 console.log(positiveSum(array));

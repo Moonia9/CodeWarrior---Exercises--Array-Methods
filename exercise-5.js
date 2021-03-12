@@ -33,7 +33,8 @@ console.log(countSheeps(array));
 
 //OR
 function countTheSheeps(arr){
-    return arr.filter(Boolean).length;
+   return arr.filter(Boolean).length
+
 }
 console.log(countTheSheeps(array));
 
@@ -45,9 +46,28 @@ console.log(countTheSheeps(array));
 
 //Rewriting the .filter(Boolean)
 
-function countSheeps(array){
+function countSheep(array){
     return array
-                .filter((item) => Boolean(item))
+                .filter(Boolean)
                 .length
 }
-console.log(countSheeps(array));
+console.log(countSheep(array));
+
+
+function countShh(arr){
+
+    return arr.reduce((total, sheep) => {
+        if(!sheep) return total;
+        /*if(sheep)*/ return total + sheep;
+
+    },0);
+             
+}
+console.log(countShh(array));
+
+function countShh1(arr){
+
+    return arr.reduce((total, sheep) => total + sheep,0);
+             
+}
+console.log(countShh1(array));
